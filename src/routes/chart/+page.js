@@ -7,5 +7,8 @@ export const load = async (loadEvent) => {
   // get only first 10 data from an api
   const firstTenCountry = allCountry.slice(0,9)
 
-  return {firstTenCountry};
+  return {
+      countriesData: firstTenCountry,
+
+  };
 };

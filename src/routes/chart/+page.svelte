@@ -1,10 +1,14 @@
 <script>
+  import Table from "../../components/Table.svelte";
+
   // your script goes here
   export let data;
-  console.log(data)
 </script>
 
-<h1 class="text-3xl font-bold underline text-blue-700">Chart</h1>
+<div class="container mx-auto ">
+
+    <Table data={data}/>
+</div>
 
 <style>
   /* your styles go here */
