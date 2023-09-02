@@ -1,29 +1,32 @@
 <script>
+  import Chart from "./../../components/Chart.svelte";
   import { onMount, tick } from "svelte";
   import Table from "../../components/Table.svelte";
   import { countryDataStore } from "../../stores/countryDataStore.js";
 
-  //   export let data;
-  let countries=[];
-  
-//   $: {
-//     console.log('countries: ', countries)
-//   }
-  
+  let countries = [];
 
-  onMount( async () => {
-    countryDataStore.subscribe((data) => {
-        countries = data;
-    //   console.log(data)
+  //   $: {
+  //     console.log('countries: ', countries)
+  //   }
+
+  onMount(async () => {
+    await countryDataStore?.subscribe((data) => {
+     countries = data;
     });
-    // await tick();
   });
 </script>
 
-<div class="container mx-auto">
-  data table
-  <Table {countries}/>
+<div class="container mx-auto flex">
+  <div class="table-container basis-3/4 gap-4">
+    <Table {countries} />
+  </div>
+  <div class="chart-container basis-1/4 gap-4">
+    <Chart {countries} />
+  </div>
 </div>
+
+<Chart {countries} />
 
 <style>
 </style>

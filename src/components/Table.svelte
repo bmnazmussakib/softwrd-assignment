@@ -3,52 +3,52 @@
   export let countries = [];
 //   const countryData = data.countriesData;
 //   console.log(countryData);
-  $: {
-    console.log('countryData: ', countries)
-  }
+  // $: {
+  //   console.log('countryData: ', countries)
+  // }
 </script>
 
-<h1>Data Table</h1>
-
-<table class="min-w-full border-collapse rounded">
-  <thead>
-    <tr class="bg-gray-200">
-      <th class="py-2 px-3 text-left">Flag</th>
-      <th class="py-2 px-3 text-left">Name</th>
-      <th class="py-2 px-3 text-left">Population</th>
-      <th class="py-2 px-3 text-left">CIOC</th>
-      <th class="py-2 px-3 text-center">UN Member Status</th>
-      <th class="py-2 px-3 text-left">Currencies</th>
-      <th class="py-2 px-3 text-left">Languages</th>
-    </tr>
-  </thead>
-  <tbody>
-    {#each countries as country}
-      <tr class="border-b border-gray-300">
-        <td class="py-2 px-3 text-4xl">{country.flag}</td>
-        <td class="py-2 px-3">{country.name.common}</td>
-        <td class="py-2 px-3">{country.population}</td>
-        <td class="py-2 px-3">{country.cioc}</td>
-        <td class="py-2 px-3 text-center">
-          <span
-            class="rounded px-4 py-2
-              {country.unMember
-              ? 'bg-green-500 text-white'
-              : 'bg-red-500 text-white'}"
-          >
-            {country.unMember ? "Yes" : "No"}
-          </span>
-        </td>
-        <td class="py-2 px-3"
-          >{country.currencies[Object.keys(country.currencies)[0]].name}</td
-        >
-        <td class="py-2 px-3"
-          >{country.languages[Object.keys(country.languages)[0]]}</td
-        >
+<div class="table-container overflow-x-auto">
+  <table class="min-w-full divide-y divide-gray-200 border-collapse">
+    <thead>
+      <tr class="bg-gray-200">
+        <th class="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Flag</th>
+        <th class="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Name</th>
+        <th class="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Population</th>
+        <th class="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">CIOC</th>
+        <th class="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">UN Member Status</th>
+        <th class="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Currencies</th>
+        <th class="px-6 py-3 bg-gray-100 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">Languages</th>
       </tr>
-    {/each}
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      {#each countries as country}
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-3 text-4xl">{country.flag}</td>
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{country.name.common}</td>
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{country.population}</td>
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{country.cioc}</td>
+          <td class="py-2 px-3 text-center">
+            <span
+              class="rounded px-4 py-2
+                {country.unMember
+                ? 'bg-green-500 text-white'
+                : 'bg-red-500 text-white'}"
+            >
+              {country.unMember ? "Yes" : "No"}
+            </span>
+          </td>
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200"
+            >{country.currencies[Object.keys(country.currencies)[0]].name}</td
+          >
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200"
+            >{country.languages[Object.keys(country.languages)[0]]}</td
+          >
+        </tr>
+      {/each}
+    </tbody>
+  </table>
+</div>
 
 <style>
   /* your styles go here */
