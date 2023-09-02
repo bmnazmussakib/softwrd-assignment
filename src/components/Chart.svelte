@@ -1,4 +1,6 @@
 <script>
+  import { afterUpdate } from "svelte";
+
   import Chart from "chart.js/auto";
   import { onMount } from "svelte";
 
@@ -7,8 +9,8 @@
   export let population = [];
   export let countryName = [];
   $: {
-    population = countries?.map((item) => item.population);
-    countryName = countries?.map((item) => item.name.common);
+    population = countries?.map((item) => item?.population);
+    countryName = countries?.map((item) => item?.name?.common);
     console.log("countryName: ", countryName);
     console.log("population: ", population);
   }
@@ -46,9 +48,55 @@
   };
 
   let ctx;
+  let myChart
 
-  onMount(async () => {
-    let myChart = new Chart(ctx, {
+  // onMount(async () => {
+
+  //   if (myChart) {
+  //     myChart.destroy(); // Destroy the existing chart if it exists
+  //   }
+
+
+  //   myChart = new Chart(ctx, {
+  //     type: "polarArea",
+  //     data: {
+  //       // labels: countryName,
+  //       datasets: [
+  //         {
+  //           label: "Population",
+  //           data: population,
+  //           backgroundColor: [
+  //             "rgb(255, 99, 132)", // Red
+  //             "rgb(75, 192, 192)", // Teal
+  //             "rgb(255, 205, 86)", // Yellow
+  //             "rgb(201, 203, 207)", // Gray
+  //             "rgb(54, 162, 235)", // Blue
+  //             "rgb(255, 159, 64)", // Orange
+  //             "rgb(153, 102, 255)", // Purple
+  //             "rgb(255, 77, 77)", // Coral
+  //             "rgb(0, 204, 102)", // Green
+  //             "rgb(255, 127, 80)", // Salmon
+  //           ],
+  //         },
+  //       ],
+  //     },
+  //     options: {
+  //       scales: {
+  //         y: {
+  //           beginAtZero: true,
+  //         },
+  //       },
+  //     },
+  //   });
+  // });
+
+  afterUpdate(() => {
+    if (myChart) {
+      myChart.destroy(); // Destroy the existing chart if it exists
+    }
+
+    
+    myChart = new Chart(ctx, {
       type: "polarArea",
       data: {
         // labels: countryName,
@@ -79,7 +127,7 @@
         },
       },
     });
-  });
+  })
 </script>
 
 <div class="chart-container w-full max-w-sm h-auto" />
