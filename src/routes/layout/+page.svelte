@@ -22,7 +22,7 @@
     2x2
   </div>
   <div
-    class="col-span-4 row-span-3 col-start-5 row-start-13 bg-yellow-100 md:col-span-4 md:col-start-7 md:row-span-4 md:row-start-3"
+    class="col-span-4 row-span-3 col-start-5 row-start-13 bg-yellow-100 md:col-span-4 md:col-start-7 md:row-span-4 md:row-start-3 min-h-full"
   >
     6
     <section class="parent-square bg-yellow-100">
@@ -48,16 +48,16 @@
 
 <style>
   .parent-square {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    min-height: 350px;
     /* background: red; */
     position: relative;
     margin: auto;
     align-items: center;
   }
   .parent-square .second-square {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     background: #293462;
     top: 50%;
     left: 50%;
@@ -66,8 +66,8 @@
   }
   .parent-square .second-square .main-circle {
     /* background: red; */
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -81,12 +81,12 @@
     overflow: hidden;
   }
   .parent-square .second-square .main-circle .big-shape {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     /* background: yellow; */
     position: absolute;
     z-index: -1;
-    top: 104px;
+    top: 80px;
     transform: rotate(45deg);
     left: 54px;
   }
@@ -96,8 +96,8 @@
     /* background: yellow; */
     position: absolute;
     z-index: -1;
-    top: 122px;
+    top: 100px;
     transform: rotate(45deg);
-    left: 4px;
+    left: 15px;
   } /*# sourceMappingURL=style.css.map */
 </style>
