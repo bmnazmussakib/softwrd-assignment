@@ -4,6 +4,7 @@
     <ul>
       <li class="text-xl"><span class="font-medium">Name:</span> B. M. Nazmus Sakib</li>
       <li class="text-xl"><span class="font-medium">Github:</span> <a href="https://github.com/bmnazmussakib/softwrd-assignment">Click Here</a></li>
+      <li class="text-xl"><span class="font-medium">Email:</span> b.m.nazmussakib7@gmail.com</li>
     </ul>
   </div>
 </div>

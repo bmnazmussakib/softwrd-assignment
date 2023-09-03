@@ -17,7 +17,7 @@
   });
 </script>
 
-<div class="bg-gray-400 h-screen">
+<div class=" h-screen">
   <div class="container mx-auto flex p-6">
     <div class="table-container basis-3/4 border-2 rounded m-3 bg-white">
       <Table {countries} />
