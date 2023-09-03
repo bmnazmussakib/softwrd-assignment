@@ -24,7 +24,9 @@
     <tbody>
       {#each countries as country}
         <tr class="border-b border-gray-300">
-          <td class="py-2 px-3 text-4xl">{country.flag}</td>
+          <td class="py-2 px-3 text-4xl">
+            <img src={country.flags.svg} alt="" class="w-14">
+          </td>
           <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{country.name.common}</td>
           <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{country.population}</td>
           <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">{country.cioc}</td>

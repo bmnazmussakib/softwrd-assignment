@@ -6,9 +6,9 @@
 
   let countries = [];
 
-  //   $: {
-  //     console.log('countries: ', countries)
-  //   }
+    $: {
+      console.log('countries: ', countries)
+    }
 
   onMount(async () => {
     await countryDataStore?.subscribe((data) => {
@@ -25,8 +25,6 @@
     <Chart {countries} />
   </div>
 </div>
-
-<Chart {countries} />
 
 <style>
 </style>
