@@ -1,59 +1,58 @@
-# create-svelte
+# Preliminary Assessment
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Overview
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+Briefly describe your SvelteKit app here. Include its purpose, main features, and any unique selling points. Provide a high-level overview of what users can expect when they use your app.
 
-## Creating a project
+## Table of Contents
 
-If you're seeing this, you've probably already done this step. Congrats!
+- [Demo](#demo)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Demo
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+https://vercel.com/bmnazmussakib/softwrd-assignment/Gb9Pft5EAGSSN7T78ezeVwQJ3hk4
 
-## Developing
+## Getting Started
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Follow these steps to set up and run your SvelteKit app locally.
 
-```bash
-npm run dev
+### Prerequisites
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Before you begin, make sure you have the following software installed on your machine:
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+- [Node.js](https://nodejs.org/) (LTS version recommended)
+- [npm](https://www.npmjs.com/) (usually comes bundled with Node.js)
 
-## Building
+### Installation
 
-To build your library:
+Provide step-by-step instructions for installing your SvelteKit app.
 
-```bash
-npm run package
-```
+1. Clone this repository:
 
-To create a production version of your showcase app:
+   ```bash
+   git clone https://github.com/bmnazmussakib/softwrd-assignment
 
-```bash
-npm run build
-```
+   cd softwrd-assignment
 
-You can preview the production build with `npm run preview`.
+   npm install
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+   
+   ```
 
-## Publishing
+2. Run the Development Server:
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
+To start the development server and run your SvelteKit app locally, use the following command:
 
 ```bash
-npm publish
-```
-# softwrd-assignment
+   npm run dev
+
+   ```
+   This will build your app and make it available at http://localhost:5173. Open your web browser and navigate to this URL to view your app.
+
+
