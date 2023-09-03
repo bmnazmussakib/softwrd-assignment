@@ -10,9 +10,6 @@ Briefly describe your SvelteKit app here. Include its purpose, main features, an
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Demo
 
