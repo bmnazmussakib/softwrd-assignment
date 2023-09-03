@@ -1,3 +1,9 @@
-<h1 class="text-3xl font-bold underline text-green-400">
-    MAP
-  </h1>
+<script>
+    import Map from "../../components/Map.svelte";
+
+  
+</script>
+
+<h1>Welcome to My OpenLayers Map</h1>
+
+<Map />
