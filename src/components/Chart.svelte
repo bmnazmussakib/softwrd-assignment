@@ -2,7 +2,6 @@
   import { afterUpdate } from "svelte";
 
   import Chart from "chart.js/auto";
-  import { onMount } from "svelte";
 
   export let countries = [];
 
@@ -48,14 +47,13 @@
   };
 
   let ctx;
-  let myChart
+  let myChart;
 
   // onMount(async () => {
 
   //   if (myChart) {
   //     myChart.destroy(); // Destroy the existing chart if it exists
   //   }
-
 
   //   myChart = new Chart(ctx, {
   //     type: "polarArea",
@@ -95,15 +93,16 @@
       myChart.destroy(); // Destroy the existing chart if it exists
     }
 
-    
     myChart = new Chart(ctx, {
       type: "polarArea",
       data: {
-        // labels: countryName,
+        labels: countryName,
+        position: "bottom",
         datasets: [
           {
             label: "Population",
             data: population,
+            position: "bottom",
             backgroundColor: [
               "rgb(255, 99, 132)", // Red
               "rgb(75, 192, 192)", // Teal
@@ -120,14 +119,24 @@
         ],
       },
       options: {
-        scales: {
-          y: {
-            beginAtZero: true,
+        legend: {
+          position: "bottom",
+          labels: {
+            padding: 30,
+            position: "bottom",
           },
+        },
+        scales: {
+          // y: {
+          //   beginAtZero: false,
+          // },
+          // x: {
+          //   name: "",
+          // },
         },
       },
     });
-  })
+  });
 </script>
 
 <div class="chart-container w-full max-w-sm h-auto" />

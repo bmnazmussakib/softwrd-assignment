@@ -28,8 +28,5 @@
 <div id="map" class="w-screen h-screen"></div>
 
 <style>
-  /* Add custom CSS styles for the map container if needed */
-  #map {
-    /* Customize map container styles here */
-  }
+
 </style>
