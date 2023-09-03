@@ -25,7 +25,7 @@
   });
 </script>
 
-<div id="map" style="width: 100%; height: 400px;"></div>
+<div id="map" class="w-screen h-screen"></div>
 
 <style>
   /* Add custom CSS styles for the map container if needed */
