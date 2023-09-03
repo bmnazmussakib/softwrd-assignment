@@ -13,7 +13,7 @@ Briefly describe your SvelteKit app here. Include its purpose, main features, an
 
 ## Demo
 
-https://vercel.com/bmnazmussakib/softwrd-assignment/Gb9Pft5EAGSSN7T78ezeVwQJ3hk4
+https://softwrd-assignment-b4rey72ut-bmnazmussakib.vercel.app
 
 ## Getting Started
 
